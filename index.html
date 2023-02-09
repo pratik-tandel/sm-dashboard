@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Social Dashboard</title>
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <div class="wrapper d-flex flex-col">
+    <!-- Intro Wrapper -->
+    <div class="intro-wrapper">
+      <div class="container">
+        <div class="intro__content-wrapper d-flex">
+          <!-- Intro -->
+          <div class="intro">
+            <h1 class="intro__title">Social Media Dashboard</h1>
+            <p class="intro__info">Total Followers: 23,004</p>
+          </div>
+          <!-- /Intro -->
+          <!-- Theme Switcher -->
+          <div class="theme__switch d-flex justify-content-center align-items-center">
+            <span class="switch__title">Dark Mode</span>
+            <label class="switch">
+              <input type="checkbox" name="theme-switcher__btn" id="theme-toggler" onchange="toggleTheme()">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <!-- /Theme Switcher -->
+        </div>
+      </div>
+    </div>
+    <!-- /Intro Wrapper -->
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+      <div class="container cards-container">
+        <!-- Social Media Cards -->
+        <div class="social-media-cards d-grid">
+          <!-- Social Media Card -->
+          <div class="social-media-card d-flex flex-col justify-content-start align-items-center">
+            <div class="social-media-card__border fb-card"></div>
+            <div class="social-media-card__account d-flex justify-content-center">
+              <span class="social-media-card__account-logo">
+                <img src="./images/icon-facebook.svg" alt="Facebook logo">
+              </span>
+              <p class="social-media-card__account-username">@nathanf</p>
+            </div>
+            <p class="social-media-card__account-followers-count">1987</p>
+            <p class="social-media-card__account-followers-title">Followers</p>
+            <div class="social-media-card__account-stats">
+              <span class="social-media-card__account-stats__wrapper">
+                <img class="social-media-card__account-stats__logo" src="./images/icon-up.svg" alt="up arrow">
+              </span>
+              <span class="social-media-card__account-stats__info stats-up">12 Today</span>
+            </div>
+          </div>
+          <!-- /Social Media Card -->
+
+          <!-- Social Media Card -->
+          <div class="social-media-card d-flex flex-col justify-content-start align-items-center">
+            <div class="social-media-card__border twitter-card"></div>
+            <div class="social-media-card__account d-flex">
+              <span class="social-media-card__account-logo">
+                <img src="./images/icon-twitter.svg" alt="Twitter logo">
+              </span>
+              <p class="social-media-card__account-username">@nathanf</p>
+            </div>
+            <p class="social-media-card__account-followers-count">1044</p>
+            <p class="social-media-card__account-followers-title">Followers</p>
+            <div class="social-media-card__account-stats">
+              <span class="social-media-card__account-stats__wrapper">
+                <img class="social-media-card__account-stats__logo" src="./images/icon-up.svg" alt="up arrow">
+              </span>
+              <span class="social-media-card__account-stats__info stats-up">99 Today</span>
+            </div>
+          </div>
+          <!-- /Social Media Card -->
+
+          <!-- Social Media Card -->
+          <div class="social-media-card d-flex flex-col justify-content-start align-items-center">
+            <div class="social-media-card__border insta-card"></div>
+            <div class="social-media-card__account d-flex">
+              <span class="social-media-card__account-logo">
+                <img src="./images/icon-instagram.svg" alt="Instagram logo">
+              </span>
+              <p class="social-media-card__account-username">@realnathanf</p>
+            </div>
+            <p class="social-media-card__account-followers-count">11k</p>
+            <p class="social-media-card__account-followers-title">Followers</p>
+            <div class="social-media-card__account-stats">
+              <span class="social-media-card__account-stats__wrapper">
+                <img class="social-media-card__account-stats__logo" src="./images/icon-up.svg" alt="up arrow">
+              </span>
+              <span class="social-media-card__account-stats__info stats-up">1099 Today</span>
+            </div>
+          </div>
+          <!-- /Social Media Card -->
+
+          <!-- Social Media Card -->
+          <div class="social-media-card d-flex flex-col justify-content-start align-items-center">
+            <div class="social-media-card__border youtube-card"></div>
+            <div class="social-media-card__account d-flex">
+              <span class="social-media-card__account-logo">
+                <img src="./images/icon-youtube.svg" alt="YouTube logo">
+              </span>
+              <p class="social-media-card__account-username">Nathan F.</p>
+            </div>
+            <p class="social-media-card__account-followers-count">8239</p>
+            <p class="social-media-card__account-followers-title">Subscribers</p>
+            <div class="social-media-card__account-stats">
+              <span class="social-media-card__account-stats__wrapper">
+                <img class="social-media-card__account-stats__logo" src="./images/icon-down.svg" alt="down arrow">
+              </span>
+              <span class="social-media-card__account-stats__info stats-down">144 Today</span>
+            </div>
+          </div>
+          <!-- /Social Media Card -->
+        </div>
+        <!-- Social Media Cards -->
+
+        <!-- Overview -->
+        <div class="overview">
+          <h2 class="overview__title">Overview - Today</h2>
+          <!-- Overview Cards -->
+          <div class="overview-cards d-grid">
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Page Views</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-facebook.svg" alt="Facebook logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">87</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-up.svg" alt="up arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-up">3%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Likes</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-facebook.svg" alt="Facebook logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">52</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-down.svg" alt="down arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-down">2%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Likes</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-instagram.svg" alt="Instagram logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">5462</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-up.svg" alt="up arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-up">2257%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Profile Views</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-instagram.svg" alt="Instagram logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">52k</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-up.svg" alt="up arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-up">1375%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Retweets</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-twitter.svg" alt="Twitter logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">117</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-up.svg" alt="up arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-up">303%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Likes</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-twitter.svg" alt="Twitter logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">507</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-up.svg" alt="up arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-up">553%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Likes</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-youtube.svg" alt="YouTube logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">107</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-down.svg" alt="down arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-down">19%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+
+            <!-- Overview Card -->
+            <div class="overview-card d-flex flex-col">
+              <div class="overview-card__intro d-flex flex-row justify-content-between align-items-center">
+                <p class="overview-card__intro-title">Total Views</p>
+                <span class="overview-card__intro-logo__wrapper">
+                  <img class="overview-card__intro-logo" src="./images/icon-youtube.svg" alt="YouTube logo">
+                </span>
+              </div>
+              <div class="overview-card__stats d-flex flex-row justify-content-between align-items-end">
+                <p class="overview-card__stats-count">1407</p>
+                <div>
+                  <span class="overview-card__stats__logo-wrapper">
+                    <img class="overview-card__stats__logo" src="./images/icon-down.svg" alt="down arrow">
+                  </span>
+                  <span class="overview-card__stats__info stats-down">12%</span>
+                </div>
+              </div>
+            </div>
+            <!-- /Overview Card -->
+          </div>
+          <!-- /Overview Cards -->
+        </div>
+        <!-- /Overview -->
+
+        <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Pratik Tandel</a>.
+        </div> -->
+      </div>
+    </div>
+    <!-- Main Wrapper -->
+  </div>
+  <!-- /Wrapper -->
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
